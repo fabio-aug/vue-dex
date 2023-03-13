@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <footer class="py-3 border-top">
+  <footer class="py-3 border-top mt-3">
     <ul class="nav justify-content-center">
       <li class="nav-item">
         <a
@@ -14,7 +14,7 @@
       </li>
       <li class="nav-item">
         <a
-          href="#"
+          href="https://pokeapi.co/"
           class="nav-link px-2 text-muted"
           target="_blank"
         >
