@@ -1,7 +1,11 @@
-<script setup></script>
+<script>
+export default {
+  name: 'FooterLayout',
+};
+</script>
 
 <template>
-  <footer class="py-3 border-top mt-3">
+  <footer class="py-3 border-top">
     <ul class="nav justify-content-center">
       <li class="nav-item">
         <a
@@ -51,11 +55,3 @@
     </ul>
   </footer>
 </template>
-
-<style scoped>
-footer {
-  bottom: 0;
-  position: relative;
-  width: 100%;
-}
-</style>

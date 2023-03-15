@@ -1,14 +1,16 @@
 <script>
-import { RouterView } from 'vue-router';
-import HeaderLayout from './components/HeaderLayout.vue';
-import FooterLayout from './components/FooterLayout.vue';
+import {
+  HeaderLayout,
+  MainLayout,
+  FooterLayout
+} from './components/layouts/index';
 
 export default {
   name: 'App',
   components: {
-    RouterView,
     HeaderLayout,
-    FooterLayout
+    MainLayout,
+    FooterLayout,
   }
 };
 </script>
@@ -16,23 +18,7 @@ export default {
 <template>
   <HeaderLayout />
 
-  <main>
-    <RouterView />
-  </main>
+  <MainLayout />
 
   <FooterLayout />
 </template>
-
-<style>
-html,
-body,
-#app {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-</style>

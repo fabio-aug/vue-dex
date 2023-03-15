@@ -1,0 +1,41 @@
+@import url('./bootstrap.min.css');
+
+html,
+body,
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.font-vd {
+  background: linear-gradient(#327959, #2A3642);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-v {
+  color: #327959;
+}
+
+.font-d {
+  color: #2A3642;
+}
+
+.backgroud-v {
+  background-color: #327959;
+}
+
+.backgroud-d {
+  background-color: #2A3642;
+}
