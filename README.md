@@ -11,7 +11,11 @@ The pokémon database developed in the Vue.js framework.
 - Creation of routes with vue-router;
 - Rest API consumption for data fetching;
 - Bootstrap for application stylization;
-- Code componentization;
+- Code componentization.
+
+## Recommended Setup
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)).
 
 ## How To Use
 
@@ -46,7 +50,7 @@ This software uses the following packages and features:
 - [Bootstrap](https://getbootstrap.com/);
 - [TypesSvg](https://github.com/duiker101/pokemon-type-svg-icons);
 - [PokéApi](https://pokeapi.co/);
-- [Vue Router](https://router.vuejs.org/);
+- [Vue Router](https://router.vuejs.org/).
 
 ## License
 
