@@ -1,12 +1,7 @@
 
-<div style="display: flex !important; flex-direction: column !important; align-items: center !important;">
-  <img src="./src/assets/docs/logo.png" alt="Markdownify" width="200">
-  <h1 style="width: 100% !important; text-align: center !important;">
-    Vue Dex
-  </h1>
-</div>
+# Vue Dex
 
-<p style="text-align: center;">The pokémon database developed in the Vue.js framework.</p>
+The pokémon database developed in the Vue.js framework.
 
 ![screenshot](./src/assets/docs/app.png)
 
