@@ -1,4 +1,4 @@
-<script>
+<script lang="js">
 import { RouterView } from 'vue-router';
 export default {
   name: 'MainLayout',

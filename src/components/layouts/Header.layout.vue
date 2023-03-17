@@ -1,4 +1,4 @@
-<script>
+<script lang="js">
 import { RouterLink } from 'vue-router';
 
 export default {
@@ -22,7 +22,16 @@ export default {
 <template>
   <header class="py-3 border-bottom">
     <div class="container d-flex flex-wrap justify-content-center">
-      <ul class="nav d-flex col-12 col-md-auto col-lg-auto me-md-auto me-lg-auto justify-content-center">
+      <RouterLink
+        to="/home"
+        class="font-vd col-12 col-md-auto col-lg-auto me-md-auto me-lg-auto "
+      >
+        <h3 class="font-vd h-100 d-flex justify-content-center align-items-center ">
+          Vue Dex
+        </h3>
+      </RouterLink>
+
+      <ul class="nav d-flex">
         <li class="nav-item">
           <RouterLink
             class="nav-link"
@@ -30,7 +39,7 @@ export default {
             :class="{ 'link-secondary': !isHome, 'link-dark': isHome }"
             to="/home"
           >
-            Principal
+            Home
           </RouterLink>
         </li>
         <li class="nav-item">
@@ -38,27 +47,12 @@ export default {
             class="nav-link"
             style="user-select: none;"
             :class="{ 'link-secondary': !isPokedex, 'link-dark': isPokedex }"
-            to="pokedex"
+            to="/pokedex"
           >
             Pokédex
           </RouterLink>
         </li>
       </ul>
-
-      <form
-        class="d-flex"
-        role="search"
-      >
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Procurar por um pokémon"
-          aria-label="Search"
-        >
-        <button class="btn btn-outline-success">
-          Buscar
-        </button>
-      </form>
     </div>
   </header>
 </template>

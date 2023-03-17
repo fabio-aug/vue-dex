@@ -1,4 +1,4 @@
-<script>
+<script lang="js">
 export default {
   name: 'FooterLayout',
 };
@@ -13,7 +13,7 @@ export default {
           class="nav-link px-2 text-muted"
           target="_blank"
         >
-          Autor
+          Author
         </a>
       </li>
       <li class="nav-item">
@@ -49,7 +49,7 @@ export default {
           class="nav-link px-2 text-muted"
           target="_blank"
         >
-          Sobre
+          About
         </a>
       </li>
     </ul>

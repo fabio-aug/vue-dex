@@ -1,9 +1,9 @@
-export default class RestApi {
-  static URL = 'https://pokeapi.co/api/v2';
+class RestApi {
+  URL = 'https://pokeapi.co/api/v2';
   static TOKEN = '';
 
-  static async httpMethod(method, url, body) {
-    return fetch(url, {
+  async httpMethod(method, path, body) {
+    return fetch(`${this.URL}${path}`, {
       method: method,
       headers: {
         Accept: 'application/json',
@@ -14,10 +14,12 @@ export default class RestApi {
     });
   }
 
-  static httpGet = (url) => this.httpMethod('GET', url).then((res) => res.json());
-  static httpPost = (url, body) => this.httpMethod('POST', url, body).then((res) => res.json());
-  static httpPut = (url, body) => this.httpMethod('PUT', url, body).then((res) => res.json());
-  static httpDelete = (url) => this.httpMethod('DELETE', url).then((res) => res.json());
+  httpGet = (path) => this.httpMethod('GET', path).then((res) => res.json());
+  httpPost = (path, body) => this.httpMethod('POST', path, body).then((res) => res.json());
+  httpPut = (path, body) => this.httpMethod('PUT', path, body).then((res) => res.json());
+  httpDelete = (path) => this.httpMethod('DELETE', path).then((res) => res.json());
 
-  static setToken = (token) => this.TOKEN = `Bearer ${token}`;
+  setToken = (token) => this.TOKEN = `Bearer ${token}`;
 }
+
+export default new RestApi();

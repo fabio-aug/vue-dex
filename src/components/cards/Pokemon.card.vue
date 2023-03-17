@@ -1,5 +1,6 @@
-<script>
+<script lang="js">
 import { Utils } from '../../modules';
+import { RouterLink } from 'vue-router';
 import * as TypesSvg from '../../assets/types';
 import { PokemonServices } from '../../services';
 
@@ -45,47 +46,62 @@ export default {
         this.pokemon = res;
       }
     }).catch((e) => {
-      console.log('NationalView -> methods -> getPokemonList()', e);
+      console.log('PokemonCard -> mounted()', e);
     }).finally(() => this.loading = false);
+  },
+
+  components: {
+    RouterLink
   }
 };
 </script>
 
 <template>
   <div
-    v-if="isReady"
-    class="card card-body card-poke mb-3"
-    :style="`background-color: ${getPokemonTypeColor(pokemon.types[0].type.name)}55`"
+    v-if="isReady && pokemon.is_default"
+    class="col-12 col-sm-6 col-md-4 col-lg-3"
   >
-    <img
-      :src="pokemon.sprites.other['official-artwork'].front_default"
-      class="card-img-top img-pokemon img-pokeball"
-      :alt="pokemon.name"
-    >
-    <h5 class="card-title cap">
-      <small class="text-muted"> # {{ pokemon.id }} </small>
-      {{ pokemon.name }}
-    </h5>
-    <div class="type-container">
+    <RouterLink :to="`/details/${pokemon.name}`">
       <div
-        v-for="(type, idx) in pokemon.types"
-        :key="idx"
-        class="card-type m-1"
-        :style="`background-color: ${getPokemonTypeColor(type.type.name)}`"
+        class="card card-body card-poke mb-3"
+        :style="`background-color: ${getPokemonTypeColor(pokemon.types[0].type.name)}55`"
       >
         <img
-          width="20"
-          height="20"
-          class="card-img-top img-type"
-          :src="getPokemonTypeSvg(type.type.name)"
-          :alt="`${pokemon.name} type ${type.type.name}`"
-        > {{ type.type.name }}
+          :src="pokemon.sprites.other['official-artwork'].front_default"
+          class="card-img-top img-pokemon img-pokeball"
+          :alt="pokemon.name"
+        >
+        <h5 class="card-title cap">
+          <small class="text-muted"> # {{ pokemon.id }} </small>
+          {{ pokemon.name.replace('-', ' ') }}
+        </h5>
+        <div class="type-container">
+          <div
+            v-for="(type, idx) in pokemon.types"
+            :key="idx"
+            class="card-type m-1"
+            :style="`background-color: ${getPokemonTypeColor(type.type.name)}`"
+          >
+            <img
+              width="20"
+              height="20"
+              class="card-img-top img-type"
+              :src="getPokemonTypeSvg(type.type.name)"
+              :alt="`${pokemon.name} type ${type.type.name}`"
+            > {{ type.type.name }}
+          </div>
+        </div>
       </div>
-    </div>
+    </RouterLink>
   </div>
 </template>
 
 <style>
+a {
+  text-decoration: none;
+  color: initial;
+}
+
 .cap {
   display: flex;
   margin-top: .5rem;
@@ -111,8 +127,13 @@ export default {
 }
 
 .img-pokemon {
+  width: 150px;
+  height: 150px;
+  display: flex;
   max-width: 150px;
   max-height: 150px;
+  align-items: center;
+  justify-content: center;
 }
 
 .img-pokeball {
@@ -141,8 +162,8 @@ export default {
 }
 
 .img-type {
-  max-width: 15px;
-  max-height: 15px;
+  max-width: 20px;
+  max-height: 20px;
   margin-right: 5px;
 }
 </style>

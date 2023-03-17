@@ -1,11 +1,11 @@
-export default class Utils {
-  static getTypeColor(type) {
+class Utils {
+  getTypeColor(type) {
     switch (type) {
     case 'fire':
       return '#FD7D24';
     case 'water':
       return '#4A90DA';
-    case 'eletric':
+    case 'electric':
       return '#EED535';
     case 'grass':
       return '#62B957';
@@ -35,8 +35,12 @@ export default class Utils {
       return '#417D9A';
     case 'fairy':
       return '#ED6EC7';
-    default:
+    case 'normal':
       return '#9DA0AA';
+    default:
+      return '#ffffff';
     }
   }
 }
+
+export default new Utils();

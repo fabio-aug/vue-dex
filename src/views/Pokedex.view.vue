@@ -1,4 +1,4 @@
-<script>
+<script lang="js">
 import { PokemonCard } from '../components/cards';
 import { PokemonServices } from '../services';
 
@@ -7,7 +7,7 @@ export default {
 
   data() {
     return {
-      limit: 9,
+      limit: 151,
       offset: 0,
       next: true,
       loading: false,
@@ -49,12 +49,12 @@ export default {
     <div class="row d-flex justify-content-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         <h1 class="display-4 text-center">
-          Pokédex Nacional
+          National Pokédex
         </h1>
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
         <p>
-          Aqui são listados os monstrinhos de todas as gerações. Para mais detalhes de um pokémon basta clicar no mesmo.
+          Here the little monsters of all generations are listed. For more details of a pokémon just click on it.
         </p>
       </div>
     </div>
@@ -68,25 +68,23 @@ export default {
         class="spinner-border m-5"
         style="width: 5rem; height: 5rem;"
       >
-        <span class="visually-hidden">Carregando...</span>
+        <span class="visually-hidden">Loading...</span>
       </div>
     </div>
     <div v-else-if="renderList.length === 0 && !loading">
       <p class="lead text-center">
-        Nenhuma informação encontrada no momento.
+        No information found at the moment.
       </p>
     </div>
     <div
       v-else
       class="row d-flex justify-content-center"
     >
-      <div
+      <PokemonCard
         v-for="(pokemon, idx) in renderList"
         :key="idx"
-        class="col-12 col-sm-6 col-md-4 col-lg-3"
-      >
-        <PokemonCard :pokemon-name="pokemon.name" />
-      </div>
+        :pokemon-name="pokemon.name"
+      />
 
       <div
         class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center"
@@ -113,7 +111,7 @@ export default {
           class="btn btn-success"
           style="text-transform: uppercase;"
         >
-          Carregar mais
+          Load more
         </button>
       </div>
     </div>
