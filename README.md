@@ -1,7 +1,7 @@
 
-<div style="display: flex; flex-direction: column; align-items: center;">
+<div style="display: flex !important; flex-direction: column !important; align-items: center !important;">
   <img src="./src/assets/docs/logo.png" alt="Markdownify" width="200">
-  <h1 style="width: 100%; text-align: center;">
+  <h1 style="width: 100% !important; text-align: center !important;">
     Vue Dex
   </h1>
 </div>
