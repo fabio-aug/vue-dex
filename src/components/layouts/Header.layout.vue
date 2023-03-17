@@ -24,9 +24,9 @@ export default {
     <div class="container d-flex flex-wrap justify-content-center">
       <RouterLink
         to="/home"
-        class="font-vd col-12 col-md-auto col-lg-auto me-md-auto me-lg-auto "
+        class="col-12 col-md-auto col-lg-auto me-md-auto me-lg-auto "
       >
-        <h3 class="font-vd h-100 d-flex justify-content-center align-items-center ">
+        <h3 class="h-100 d-flex justify-content-center align-items-center ">
           Vue Dex
         </h3>
       </RouterLink>
