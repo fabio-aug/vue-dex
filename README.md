@@ -1,5 +1,5 @@
 
-<h1 style="text-align: center;">
+<h1 style="display: flex; flex-direction: column; align-items: center;">
   <img src="./src/assets/docs/logo.png" alt="Markdownify" width="200">
   <br>
   Vue Dex
@@ -12,11 +12,11 @@
 
 ## Key Features
 
-- Framework Vue.js para construção da aplicação;
-- Criação de rotas com vue-router;
-- Consumo de API Rest para busca de dados;
-- Bootstrap para estilização da aplicação;
-- Componentização do código;
+- Vue.js framework for building the application;
+- Creation of routes with vue-router;
+- Rest API consumption for data fetching;
+- Bootstrap for application stylization;
+- Code componentization;
 
 ## How To Use
 
