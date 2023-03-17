@@ -1,35 +1,58 @@
-# vue-dex
 
-This template should help get you started developing with Vue 3 in Vite.
+<h1 style="text-align: center;">
+  <img src="./src/assets/docs/logo.png" alt="Markdownify" width="200">
+  <br>
+  Vue Dex
+  <br>
+</h1>
 
-## Recommended IDE Setup
+<p style="text-align: center;">The pokémon database developed in the Vue.js framework.</p>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![screenshot](./src/assets/docs/app.png)
 
-## Customize configuration
+## Key Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Framework Vue.js para construção da aplicação;
+- Criação de rotas com vue-router;
+- Consumo de API Rest para busca de dados;
+- Bootstrap para estilização da aplicação;
+- Componentização do código;
 
-## Project Setup
+## How To Use
 
-```sh
-npm install
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/fabio-aug/vue-dex.git
+
+# Go into the repository
+$ cd vue-dex
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev
+
+# Or Compile and Minify for Production
+$ npm run build
 ```
 
-### Compile and Hot-Reload for Development
+> **Note**
+> If you don't use Linux and don't have bash, do whatever flow you think is most appropriate.
 
-```sh
-npm run dev
-```
+## Credits
 
-### Compile and Minify for Production
+This software uses the following packages and features:
 
-```sh
-npm run build
-```
+- [Node.js](https://nodejs.org/);
+- [Vue.js](https://vuejs.org/);
+- [Bootstrap](https://getbootstrap.com/);
+- [TypesSvg](https://github.com/duiker101/pokemon-type-svg-icons);
+- [PokéApi](https://pokeapi.co/);
+- [Vue Router](https://router.vuejs.org/);
 
-### Lint with [ESLint](https://eslint.org/)
+## License
 
-```sh
-npm run lint
-```
+MIT
